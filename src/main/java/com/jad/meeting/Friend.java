@@ -11,4 +11,12 @@ public class Friend extends Person implements Meetable {
     public void drink() {
         System.out.println("On picole entre potes");
     }
+
+    public String getSurName() {
+        return this.surName;
+    }
+
+    public void setSurName(final String surName) {
+        this.surName = surName;
+    }
 }

@@ -3,8 +3,8 @@ package com.jad.meeting;
 import java.util.ArrayList;
 
 public class Company implements Meetable {
-    private String label;
     private final ArrayList<Person> employees = new ArrayList<>();
+    private String label;
 
     public Company(final String label) {
         this.label = label;
@@ -27,6 +27,6 @@ public class Company implements Meetable {
     }
 
     public void sayHelloToEveryone() {
-        System.out.println("Je dis bonjour à tout ,le monde, pour bine me faire voir par la boite.");
+        System.out.println("Je dis bonjour à tout ,le monde, pour bien me faire voir par la boite.");
     }
 }

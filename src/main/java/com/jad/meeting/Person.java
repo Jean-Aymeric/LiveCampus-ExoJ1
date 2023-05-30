@@ -29,7 +29,7 @@ public class Person {
         // To do
         // Lorsque meetable est :
         // - une entreprise, il faut lancer la méthode sayHelloToEveryone() et afficher le nombre d'employés
-        // - paramour, lan,cer la méthode doHug()
+        // - paramour, lancer la méthode doHug()
         // - friend, lancer la méthode drink() et afficher le surnom du pote.
     }
 }
