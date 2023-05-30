@@ -32,7 +32,8 @@ class PersonTest {
     void meetFriend() {
         final Person person = new Person("LastName", "FirstName");
         person.meet(PersonTest.FRIEND);
-        assertEquals("On picole entre potes " + FRIEND.getSurName(), this.outputStreamCaptor.toString().trim());
+        assertEquals("On picole entre potes " + PersonTest.FRIEND.getSurName(),
+                this.outputStreamCaptor.toString().trim());
     }
 
     @Test
