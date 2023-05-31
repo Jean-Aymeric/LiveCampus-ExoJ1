@@ -27,6 +27,11 @@ public class Company implements Meetable {
     }
 
     public void sayHelloToEveryone() {
-        System.out.println("Je dis bonjour à tout ,le monde, pour bien me faire voir par la boite.");
+        System.out.print("Je dis bonjour à tout ,le monde, pour bien me faire voir par la boite.");
+    }
+
+    @Override
+    public void isMet(final Person person) {
+        person.meet(this);
     }
 }

@@ -8,4 +8,9 @@ public class Paramour extends Person implements Meetable {
     public void doHug() {
         System.out.println("On se fait un câlin");
     }
+
+    @Override
+    public void isMet(final Person person) {
+        person.meet(this);
+    }
 }

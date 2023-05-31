@@ -26,10 +26,20 @@ public class Person {
     }
 
     public void meet(final Meetable meetable) {
-        // To do
-        // Lorsque meetable est :
-        // - une entreprise, il faut lancer la méthode sayHelloToEveryone() et afficher le nombre d'employés
-        // - paramour, lancer la méthode doHug()
-        // - friend, lancer la méthode drink() et afficher le surnom du pote.
+        meetable.isMet(this);
+    }
+
+    public void meet(final Friend friend) {
+        friend.drink();
+        System.out.println(" " + friend.getSurName());
+    }
+
+    public void meet(final Paramour paramour) {
+        paramour.doHug();
+    }
+
+    public void meet(final Company company) {
+        company.sayHelloToEveryone();
+        System.out.println(" " + company.getNbEmployees());
     }
 }

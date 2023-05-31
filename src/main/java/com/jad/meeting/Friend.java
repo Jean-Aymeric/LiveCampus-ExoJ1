@@ -9,7 +9,7 @@ public class Friend extends Person implements Meetable {
     }
 
     public void drink() {
-        System.out.println("On picole entre potes");
+        System.out.print("On picole entre potes");
     }
 
     public String getSurName() {
@@ -18,5 +18,10 @@ public class Friend extends Person implements Meetable {
 
     public void setSurName(final String surName) {
         this.surName = surName;
+    }
+
+    @Override
+    public void isMet(final Person person) {
+        person.meet(this);
     }
 }

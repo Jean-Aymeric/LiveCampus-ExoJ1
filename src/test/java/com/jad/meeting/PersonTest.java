@@ -31,7 +31,7 @@ class PersonTest {
     @Test
     void meetFriend() {
         final Person person = new Person("LastName", "FirstName");
-        person.meet(PersonTest.FRIEND);
+        person.meet((Meetable) PersonTest.FRIEND);
         assertEquals("On picole entre potes " + PersonTest.FRIEND.getSurName(),
                 this.outputStreamCaptor.toString().trim());
     }
@@ -39,14 +39,14 @@ class PersonTest {
     @Test
     void meetParamour() {
         final Person person = new Person("LastName", "FirstName");
-        person.meet(PersonTest.PARAMOUR);
+        person.meet((Meetable) PersonTest.PARAMOUR);
         assertEquals("On se fait un câlin", this.outputStreamCaptor.toString().trim());
     }
 
     @Test
     void meetCompany() {
         final Person person = new Person("LastName", "FirstName");
-        person.meet(PersonTest.COMPANY);
+        person.meet((Meetable) PersonTest.COMPANY);
         assertEquals(
                 "Je dis bonjour à tout ,le monde, pour bien me faire voir par la boite. " +
                         PersonTest.COMPANY.getNbEmployees(),
