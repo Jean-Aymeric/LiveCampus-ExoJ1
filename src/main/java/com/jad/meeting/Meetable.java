@@ -1,5 +1,5 @@
 package com.jad.meeting;
 
 public interface Meetable {
-    void isMet(Person person);
+    void isMet(Meeter meeter);
 }

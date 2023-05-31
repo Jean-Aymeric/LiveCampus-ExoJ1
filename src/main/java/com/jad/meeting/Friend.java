@@ -21,7 +21,7 @@ public class Friend extends Person implements Meetable {
     }
 
     @Override
-    public void isMet(final Person person) {
-        person.meet(this);
+    public void isMet(final Meeter meeter) {
+        meeter.meet(this);
     }
 }

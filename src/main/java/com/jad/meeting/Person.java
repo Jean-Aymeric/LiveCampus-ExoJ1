@@ -1,6 +1,6 @@
 package com.jad.meeting;
 
-public class Person {
+public class Person implements Meeter {
     private String lastName;
     private String firstName;
 
@@ -25,19 +25,23 @@ public class Person {
         this.firstName = firstName;
     }
 
+    @Override
     public void meet(final Meetable meetable) {
         meetable.isMet(this);
     }
 
+    @Override
     public void meet(final Friend friend) {
         friend.drink();
         System.out.println(" " + friend.getSurName());
     }
 
+    @Override
     public void meet(final Paramour paramour) {
         paramour.doHug();
     }
 
+    @Override
     public void meet(final Company company) {
         company.sayHelloToEveryone();
         System.out.println(" " + company.getNbEmployees());

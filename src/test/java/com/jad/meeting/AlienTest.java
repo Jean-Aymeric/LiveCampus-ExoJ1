@@ -30,23 +30,23 @@ class AlienTest {
 
     @Test
     void meetFriend() {
-        final Person person = new Person("LastName", "FirstName");
-        person.meet((Meetable) AlienTest.FRIEND);
+        final Alien alien = new Alien();
+        alien.meet((Meetable) AlienTest.FRIEND);
         assertEquals(AlienTest.FRIEND.getSurName() + " devient mon sidekick.",
                 this.outputStreamCaptor.toString().trim());
     }
 
     @Test
     void meetParamour() {
-        final Person person = new Person("LastName", "FirstName");
-        person.meet((Meetable) AlienTest.PARAMOUR);
+        final Alien alien = new Alien();
+        alien.meet((Meetable) AlienTest.PARAMOUR);
         assertEquals("Je dévore " + AlienTest.PARAMOUR.getFirstName(), this.outputStreamCaptor.toString().trim());
     }
 
     @Test
     void meetCompany() {
-        final Person person = new Person("LastName", "FirstName");
-        person.meet((Meetable) AlienTest.COMPANY);
+        final Alien alien = new Alien();
+        alien.meet((Meetable) AlienTest.COMPANY);
         assertEquals(
                 "Je prends la place du pdg de la boite " + AlienTest.COMPANY.getLabel(),
                 this.outputStreamCaptor.toString().trim());
